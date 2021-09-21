@@ -11,6 +11,7 @@ const api = new API({
 	token: "69e2f9da3ea01fd5bc01bc24b8a0d1be4c1c376ec7d04da3fe9ab9c7beb03245842cec8722b260d121117"
 });
 
+
 hearManager.hear(/^Начать|Привет|hello|хэлло|хай|start|старт/i, async(context) => {
      var exists = "UPDATE `users` SET `search` = '1' WHERE `users`.`Vk_ID` ="+ context.senderId
      conn.query(exists, (err, res) => {
