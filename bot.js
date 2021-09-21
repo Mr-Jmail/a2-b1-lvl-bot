@@ -12,7 +12,7 @@ const api = new API({
 });
 
 
-hearManager.hear(/^Начать|Привет|hello|хай|start|старт/i, async(context) => {
+hearManager.hear(/^Начать|Привет|hello|хэлло|хай|start|старт/i, async(context) => {
      var exists = "UPDATE `users` SET `search` = '1' WHERE `users`.`Vk_ID` ="+ context.senderId
      conn.query(exists, (err, res) => {
     if(err) {
