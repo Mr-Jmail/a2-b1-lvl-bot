@@ -147,7 +147,7 @@ hearManager.hear(/^add user\s(.*)$/i, async (context) => {
         resource: context.$match[1]
     });
     const adduserid = resource.id
-    if(context.senderId == 308633849 || context.senderId == 267710524) {
+    if(context.senderId == 308633849 || context.senderId == 267710524|| context.senderId == 55848407) {
     var code = "UPDATE `users` SET `logged` = '1', `password` = '1' WHERE `users`.`Vk_ID` = "+ adduserid
     var code2 = "INSERT INTO `users` (`ID`, `Vk_ID`, `logged`, `password`, `search`) VALUES (NULL, "+ adduserid + ", '1', '1', NULL);"
     var exists = "UPDATE `users` SET `search` = '1' WHERE Vk_ID ="+ adduserid + " AND `logged` = 0 AND `password` = 0"
@@ -197,7 +197,7 @@ hearManager.hear(/^add user\s(.*)$/i, async (context) => {
   }
 })
 }
-    else if(context.senderId != 308633849 || context.senderId != 267710524)
+    else if(context.senderId != 308633849 || context.senderId != 267710524 || context.senderId != 55848407)
     context.send({message: `У вас нет доступа к этой команде`})
 
 })
@@ -209,7 +209,7 @@ hearManager.hear(/^s add user\s(.*)$/i, async (context) => {
         resource: context.$match[1]
     });
     const adduserid = resource.id
-    if(context.senderId == 308633849 || context.senderId == 267710524) {
+    if(context.senderId == 308633849 || context.senderId == 267710524 || context.senderId == 55848407) {
     var code = "UPDATE `users` SET `logged` = '1', `password` = '1' WHERE `users`.`Vk_ID` = "+ adduserid
     var code2 = "INSERT INTO `users` (`ID`, `Vk_ID`, `logged`, `password`, `search`) VALUES (NULL, "+ adduserid + ", '1', '1', NULL);"
     var exists = "UPDATE `users` SET `search` = '1' WHERE Vk_ID ="+ adduserid + " AND `logged` = 0 AND `password` = 0"
@@ -248,7 +248,7 @@ hearManager.hear(/^s add user\s(.*)$/i, async (context) => {
   }
 })
 }
-    else if(context.senderId != 308633849 || context.senderId != 267710524)
+    else if(context.senderId != 308633849 || context.senderId != 267710524 || context.senderId != 55848407)
     context.send({message: `У вас нет доступа к этой команде`})
 
 })
@@ -261,7 +261,7 @@ hearManager.hear(/^delete user\s(.*)$/i, async (context) => {
     });
     const deleteuserid = resource.id
     var exists = "UPDATE `users` SET `search` = '1' WHERE Vk_ID ="+ deleteuserid + " AND `logged` = 0 AND `password` = 0"
-    if(context.senderId == 308633849 || context.senderId == 267710524) {
+    if(context.senderId == 308633849 || context.senderId == 267710524 || context.senderId == 55848407) {
         conn.query(exists, (err, res)=> {
         if(err) {
             console.log(err)
@@ -286,7 +286,7 @@ hearManager.hear(/^delete user\s(.*)$/i, async (context) => {
     }
   })
 }
-    else if(context.senderId != 308633849 || context.senderId != 267710524)
+    else if(context.senderId != 308633849 || context.senderId != 267710524 || context.senderId != 55848407)
     context.send({message: `У вас нет доступа к этой команде`})
 })
 
@@ -298,7 +298,7 @@ hearManager.hear(/^s delete user\s(.*)$/i, async (context) => {
     });
     const deleteuserid = resource.id
     var exists = "UPDATE `users` SET `search` = '1' WHERE Vk_ID ="+ deleteuserid + " AND `logged` = 0 AND `password` = 0"
-    if(context.senderId == 308633849 || context.senderId == 267710524) {
+    if(context.senderId == 308633849 || context.senderId == 267710524 || context.senderId == 55848407) {
         conn.query(exists, (err, res)=> {
         if(err) {
             console.log(err)
@@ -318,7 +318,7 @@ hearManager.hear(/^s delete user\s(.*)$/i, async (context) => {
     }
   })
 }
-    else if(context.senderId != 308633849 || context.senderId != 267710524)
+    else if(context.senderId != 308633849 || context.senderId != 267710524 || context.senderId != 55848407)
     context.send({message: `У вас нет доступа к этой команде`})
 })
 
