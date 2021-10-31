@@ -8,8 +8,8 @@ vk.updates.on('message_new', hearManager.middleware)
 const mysql = require('mysql')
 const vk1 = new VK({ token: "b46c3c5753e5a56e159eee128cceebbebd37e243fb4c65a9d16d455e3d2358799cb8529b4d3ed35bb27f0" })
 
-const conn = mysql.createPool({host: "localhost", user: "root", password: "Gamel09022006@", database: "a2-b1 bot", connectionLimit: 10})
-//const conn = mysql.createPool({host: "yvu4xahse0smimsc.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", user: "vla3izoz9mxjuqzm", password: "gd1nf39vue2rgdky", database: "tfzp8pdl0ab3p1r8", connectionLimit: 7})
+//const conn = mysql.createPool({host: "localhost", user: "root", password: "Gamel09022006@", database: "a2-b1 bot", connectionLimit: 10})
+const conn = mysql.createPool({host: "yvu4xahse0smimsc.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", user: "vla3izoz9mxjuqzm", password: "gd1nf39vue2rgdky", database: "tfzp8pdl0ab3p1r8", connectionLimit: 7})
 const api = new API({
 	token: "69e2f9da3ea01fd5bc01bc24b8a0d1be4c1c376ec7d04da3fe9ab9c7beb03245842cec8722b260d121117"
 });
