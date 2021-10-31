@@ -1,7 +1,7 @@
 const { VK, Keyboard, MessageContext, Context, VKAppPayloadContext, resolveResource, API } = require('vk-io')
-//const vk = new VK({ token: "69e2f9da3ea01fd5bc01bc24b8a0d1be4c1c376ec7d04da3fe9ab9c7beb03245842cec8722b260d121117" })
+const vk = new VK({ token: "69e2f9da3ea01fd5bc01bc24b8a0d1be4c1c376ec7d04da3fe9ab9c7beb03245842cec8722b260d121117" })
 //test group 
-const vk = new VK({token: `7f12ba60d3f54472d79c2d9a7e5188ad042442dc5c03661609d34d91925bc34bf65dc530914d2a1f12c15`})
+//const vk = new VK({token: `7f12ba60d3f54472d79c2d9a7e5188ad042442dc5c03661609d34d91925bc34bf65dc530914d2a1f12c15`})
 const { HearManager } = require('@vk-io/hear')
 const hearManager = new HearManager('<MessageContext>')
 vk.updates.on('message_new', hearManager.middleware)
